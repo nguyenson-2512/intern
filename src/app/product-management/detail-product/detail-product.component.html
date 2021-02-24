@@ -1,0 +1,32 @@
+<div class="mt-10 px-20">
+  <h1>Detail Product</h1>
+  <div class="flex pl-10">
+    <div class="flex items-center">
+      <img id="img-product" src="https://www.gettyimages.com/gi-resources/images/500px/983794168.jpg" alt="product_image">
+    </div>
+    <div class="ml-10 flex flex-col ">
+      <p class="pb-6 font-semibold ">Product name:   <span class="font-normal">{{detailInfo.productName}}</span></p>
+      <p class="pb-6 font-semibold ">Description:   <span class="font-normal">{{detailInfo.description}} </span></p>
+      <span class="font-semibold ">Tags:   </span>
+      <mat-chip-list aria-label="Tags">
+        <mat-chip *ngFor="let tag of detailInfo.tags">{{tag}}</mat-chip>
+      </mat-chip-list>
+    </div>
+  </div>
+  <div class="flex mt-6">
+    <p><span class="font-medium">Fee: </span>{{detailInfo.fee}} points</p><span class="px-3">|</span>
+    <p><span class="font-medium">Number of downloads: </span>{{detailInfo.numsOfDownload}} downloads </p><span class="px-3">|</span>
+    <p><mat-icon aria-hidden="false" aria-label="Example star icon">star</mat-icon><mat-icon aria-hidden="false" aria-label="Example star icon">star</mat-icon><mat-icon aria-hidden="false" aria-label="Example star icon">star</mat-icon><mat-icon aria-hidden="false" aria-label="Example star icon">star</mat-icon></p><span class="px-3">|</span>
+    <p><span class="font-medium">Create time:  </span>{{detailInfo.createTime}} </p>
+  </div>
+  <hr class="my-6"/>
+  <h2>Content of product</h2>
+  <p class="text-xl">OVERVIEW</p>
+  <p>{{detailInfo.content}}</p>
+</div>
+
+
+<!-- #img-product {
+  width: 100px;
+  height: 100px;
+} -->
